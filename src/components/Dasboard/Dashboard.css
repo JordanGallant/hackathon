@@ -2,9 +2,8 @@
     background-color: rgb(230, 230, 230);
     width:100%;
     min-height:300px;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    padding-bottom: 10px;
     
 
 }
@@ -19,4 +18,25 @@
     padding-bottom: 0px;
     border-radius: 0 0 10px 10px;
     box-shadow: 2px 2px 2px #bebebe;
+}
+.balance{
+    background-color: rgb(255, 255, 255);
+    width: 55%;
+    min-height: 50px;
+    margin-top: 20px;
+    padding-top: 1rem;
+    padding-bottom: 0px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 2px 2px 2px #bebebe;
+    display: inline-block;
+   
+}
+h5{
+    margin-top: 10px;
+    font-size: 10px;
+    padding: 0px;
+}
+h1{
+    padding: 0px;
+    margin: 0px;
 }
