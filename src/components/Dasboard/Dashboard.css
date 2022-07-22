@@ -53,18 +53,26 @@ button{
     margin-top: 0.5rem;
     
 }
-.sell{
-    width: 250px;
-}
 .top-buttons{
     margin-left: 130px;
 }
+.sell{
+    width: 250px;
+    color:white;
+    background-color: rgb(28, 159, 225);
+
+}
+
 .claim{
     position:absolute;
     left: 450px;
     width: 120px;
+    color:white;
+    background-color: rgb(235, 202, 37);
 }
 
 .send{
     width: 120px;
+    color:white;
+    background-color: rgb(35, 203, 125);
 }
