@@ -1,5 +1,6 @@
-import './Dashboard.css';
+import "./Dashboard.css";
 import React, { useEffect, useState } from "react";
+
 
 function Dashboard() {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -22,16 +23,16 @@ function Dashboard() {
         console.log("Found an authorized account:", account);
         setCurrentAccount(account);
       } else {
-        console.log("No authorized account found")
+        console.log("No authorized account found");
       }
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   /**
-  * Implement your connectWallet method here
-  */
+   * Implement your connectWallet method here
+   */
   const connectWallet = async () => {
     try {
       const { ethereum } = window;
@@ -41,26 +42,49 @@ function Dashboard() {
         return;
       }
 
-      const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
 
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   useEffect(() => {
     checkIfWalletIsConnected();
-  }, [])
+  }, []);
   return (
     <>
-  <div className='body'>
-   <div className='top-div'> <h1>Emmision Coin</h1></div>
-   <div className='balance'><h1>0</h1> <h5>Balance</h5></div>
-   <div className='button-div'><div className='top-buttons'><button className='claim'>Claim Tokens</button> <div className='middle-button'><button className='send' onClick={connectWallet}>Connect </button></div></div><div className='bottom-button'><button className='sell'>Sell</button></div></div>
+      <div className="body">
+        <div className="top-div">
+          {" "}
+          <h1>Green Gas DAPP</h1>
+        </div>
+        <div className="balance">
+          <h1>0</h1> <h5>Balance</h5>
+        </div>
+        <div className="button-div">
+          <div className="top-buttons">
+            <button className="claim">Claim Tokens</button>{" "}
+            <div className="middle-button">
+              <button className="send" onClick={connectWallet}>
+                Connect{" "}
+              </button>
+            </div>
+          </div>
+          <div className="bottom-button">
+            <button className="sell">Sell</button>
+          </div>
+        </div>
 
-  </div>
+        <div className="chart-box">
+          <h5>Recent Activity</h5>
+          <div className="graph"><img src ="https://i.ibb.co/qnCHfRS/graph.png"/></div>
+        </div>
+      </div>
     </>
   );
 }

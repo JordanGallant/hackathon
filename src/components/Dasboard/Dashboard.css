@@ -78,3 +78,26 @@ button{
     background-color: rgb(35, 203, 125);
     
 }
+.chart-box{
+    background-color: rgb(255, 255, 255);
+    width: 85%;
+    min-height: 400px;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 2px 2px 2px #bebebe;
+    margin-top: 20px;
+}
+.graph{
+background-color: blue;
+width: 100%;
+min-height: 250px;
+margin-top: 60px;
+}
+img{
+    width:100%;
+    min-height: 250px;
+}
