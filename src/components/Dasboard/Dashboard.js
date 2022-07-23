@@ -53,6 +53,8 @@ function Dashboard() {
     }
   };
 
+  
+
   useEffect(() => {
     checkIfWalletIsConnected();
   }, []);
